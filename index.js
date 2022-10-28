@@ -35,24 +35,34 @@ function addStudent() {
   physicsScore = document.getElementById("physicsScore").value;
   chemistryScore = document.getElementById("chemistryScore").value;
 
-  var newRow = Student_Info_Table.insertRow();
+  if (
+    !studentName ||
+    !mathsScore ||
+    !englishScore ||
+    !physicsScore ||
+    !chemistryScore
+  ) {
+    alert("Complete Student Data");
+  } else {
+    var newRow = Student_Info_Table.insertRow();
 
-  var nameCell = newRow.insertCell(0);
-  var mathsCell = newRow.insertCell(1);
-  var englishCell = newRow.insertCell(2);
-  var physicsCell = newRow.insertCell(3);
-  var chemistryCell = newRow.insertCell(4);
+    var nameCell = newRow.insertCell(0);
+    var mathsCell = newRow.insertCell(1);
+    var englishCell = newRow.insertCell(2);
+    var physicsCell = newRow.insertCell(3);
+    var chemistryCell = newRow.insertCell(4);
 
-  nameCell.innerHTML = studentName;
-  mathsCell.innerHTML = mathsScore;
-  englishCell.innerHTML = englishScore;
-  physicsCell.innerHTML = physicsScore;
-  chemistryCell.innerHTML = chemistryScore;
+    nameCell.innerHTML = studentName;
+    mathsCell.innerHTML = mathsScore;
+    englishCell.innerHTML = englishScore;
+    physicsCell.innerHTML = physicsScore;
+    chemistryCell.innerHTML = chemistryScore;
 
-  console.log(studentName);
-  var Intro_Page = document.querySelector(".Intro_Page");
-  var Second_Page = document.querySelector(".Second_Page");
+    console.log(studentName);
+    var Intro_Page = document.querySelector(".Intro_Page");
+    var Second_Page = document.querySelector(".Second_Page");
 
-  Intro_Page.style.display = "block";
-  Second_Page.style.display = "none";
+    Intro_Page.style.display = "block";
+    Second_Page.style.display = "none";
+  }
 }
