@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Database</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Second_Page">
+        <div class="Add_Student_Container">
+            <div class="Center">
+                <div> <label for="studentName">Student Name:</label> <br />
+                    <input type="text" id="studentName" placeholder="Bamidele Odun" required />
+                </div>
+                <br />
+                <div> <label for="mathsScore">Maths Score</label> <br />
+                    <input type="number" id="mathsScore" placeholder="" required />
+                </div>
+                <div> <label for="englishScore">English Score</label> <br />
+                    <input type="number" id="englishScore" placeholder="" required />
+                </div>
+                <div> <label for="physicsScore">Physics Score</label> <br />
+                    <input type="number" id="physicsScore" placeholder="" required />
+                </div>
+                <div> <label for="chemistryScore">Chemistry Score</label> <br />
+                    <input type="number" id="chemistryScore" placeholder="" required />
+                </div>
+                <div class="spacing"></div>
+
+                <div>
+                    <button id="addStudentButton" onclick="addStudent()">Add Student</button>
+                </div>
+                <div class="spacing"></div>
+                <div>
+                    <button id="cancleButton" onclick="backFunction()">Cancle</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="Intro_Page">
+
+        <div class="Title">
+            <h1>Zumu Secondary School Portal</h1>
+
+        </div>
+        <div class="Biggest_Container">
+            <div class="Score_Container">
+                <div class="Complete_Div">
+                    <h2>SS3 Class Scores</h2>
+                    <table id="Student_Info_Table">
+                        <tr>
+                            <th class="Name_Tab">Name</th>
+                            <th class="Bold">Maths</th>
+                            <th class="Bold">English</th>
+                            <th class="Bold">Physics</th>
+                            <th class="Bold">Chemistry</th>
+                        </tr>
+                        <tr>
+                            <td>Opeyemi Oginni</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                        </tr>
+                    </table>
+
+                    <button class="Add_Student_Button" onclick="newPage()">Add Student Score</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
