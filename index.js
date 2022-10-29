@@ -74,13 +74,12 @@ function addStudent() {
 
 function sort() {
   var numberOfStudents = Student_Info_Table.rows.length;
-  var yearOfGrads = [];
-
+  var yearOfGrad = [];
   for (i = 1; i < numberOfStudents; i++) {
     var studentGradYear = Student_Info_Table.rows[i].cells[5].innerText;
-    yearOfGrads.push(studentGradYear);
+    yearOfGrad.push(studentGradYear);
   }
 
-  _yearOfGrads = yearOfGrads.sort();
-  console.log(_yearOfGrads);
+  yearOfGrad = yearOfGrad.sort();
+  console.log(yearOfGrad);
 }
