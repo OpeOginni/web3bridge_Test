@@ -73,13 +73,14 @@ function addStudent() {
 }
 
 function sort() {
-  var numberOfStudents = Student_Info_Table.rows.length - 1;
+  var numberOfStudents = Student_Info_Table.rows.length;
   var yearOfGrads = [];
 
   for (i = 1; i < numberOfStudents; i++) {
-    var studentGradYear = Student_Info_Table.rows[i].cells[6];
+    var studentGradYear = Student_Info_Table.rows[i].cells[5].innerText;
     yearOfGrads.push(studentGradYear);
   }
 
-  yearOfGrads = yearOfGrads.sort();
+  _yearOfGrads = yearOfGrads.sort();
+  console.log(_yearOfGrads);
 }

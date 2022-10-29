@@ -28,6 +28,9 @@
                 <div> <label for="chemistryScore">Chemistry Score</label> <br />
                     <input type="number" id="chemistryScore" placeholder="" required />
                 </div>
+                <div> <label for="yearOfGrad">Year Of Graduation</label> <br />
+                    <input type="number" id="yearOfGrad" placeholder="" required />
+                </div>
                 <div class="spacing"></div>
 
                 <div>
@@ -58,6 +61,7 @@
                             <th class="Bold">English</th>
                             <th class="Bold">Physics</th>
                             <th class="Bold">Chemistry</th>
+                            <th class="Bold">Grad Year</th>
                         </tr>
                         <tr>
                             <td>Opeyemi Oginni</td>
@@ -65,10 +69,15 @@
                             <td>10</td>
                             <td>10</td>
                             <td>10</td>
+                            <td>2028</td>
                         </tr>
                     </table>
+                    <div class="spacing"></div>
 
                     <button class="Add_Student_Button" onclick="newPage()">Add Student Score</button>
+                    <button onclick="sort()">Sort By Year Of Grad
+
+                    </button>
                 </div>
 
             </div>
