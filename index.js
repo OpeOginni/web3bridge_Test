@@ -46,29 +46,33 @@ function addStudent() {
   ) {
     alert("Complete Student Data");
   } else {
-    var newRow = Student_Info_Table.insertRow();
+    if (yearOfGraduation < 2022) {
+      alert("Grad Year should be past 2022");
+    } else {
+      var newRow = Student_Info_Table.insertRow();
 
-    var nameCell = newRow.insertCell(0);
-    var mathsCell = newRow.insertCell(1);
-    var englishCell = newRow.insertCell(2);
-    var physicsCell = newRow.insertCell(3);
-    var chemistryCell = newRow.insertCell(4);
-    var gradYearCell = newRow.insertCell(5);
-    var firstStudentGradYear = Student_Info_Table.rows[1].cells[5].innerText;
+      var nameCell = newRow.insertCell(0);
+      var mathsCell = newRow.insertCell(1);
+      var englishCell = newRow.insertCell(2);
+      var physicsCell = newRow.insertCell(3);
+      var chemistryCell = newRow.insertCell(4);
+      var gradYearCell = newRow.insertCell(5);
+      var firstStudentGradYear = Student_Info_Table.rows[1].cells[5].innerText;
 
-    nameCell.innerHTML = studentName;
-    mathsCell.innerHTML = mathsScore;
-    englishCell.innerHTML = englishScore;
-    physicsCell.innerHTML = physicsScore;
-    chemistryCell.innerHTML = chemistryScore;
-    gradYearCell.innerHTML = yearOfGraduation;
+      nameCell.innerHTML = studentName;
+      mathsCell.innerHTML = mathsScore;
+      englishCell.innerHTML = englishScore;
+      physicsCell.innerHTML = physicsScore;
+      chemistryCell.innerHTML = chemistryScore;
+      gradYearCell.innerHTML = yearOfGraduation;
 
-    console.log(firstStudentGradYear);
-    var Intro_Page = document.querySelector(".Intro_Page");
-    var Second_Page = document.querySelector(".Second_Page");
+      console.log(firstStudentGradYear);
+      var Intro_Page = document.querySelector(".Intro_Page");
+      var Second_Page = document.querySelector(".Second_Page");
 
-    Intro_Page.style.display = "block";
-    Second_Page.style.display = "none";
+      Intro_Page.style.display = "block";
+      Second_Page.style.display = "none";
+    }
   }
 }
 
