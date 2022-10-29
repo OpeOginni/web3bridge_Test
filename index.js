@@ -11,6 +11,7 @@ let mathsScore;
 let englishScore;
 let physicsScore;
 let chemistryScore;
+let yearOfGraduation;
 
 function newPage() {
   var Intro_Page = document.querySelector(".Intro_Page");
@@ -34,6 +35,7 @@ function addStudent() {
   englishScore = document.getElementById("englishScore").value;
   physicsScore = document.getElementById("physicsScore").value;
   chemistryScore = document.getElementById("chemistryScore").value;
+  yearOfGraduation = document.getElementById("yearOfGrad").value;
 
   if (
     !studentName ||
@@ -51,18 +53,33 @@ function addStudent() {
     var englishCell = newRow.insertCell(2);
     var physicsCell = newRow.insertCell(3);
     var chemistryCell = newRow.insertCell(4);
+    var gradYearCell = newRow.insertCell(5);
+    var firstStudentGradYear = Student_Info_Table.rows[1].cells[5].innerText;
 
     nameCell.innerHTML = studentName;
     mathsCell.innerHTML = mathsScore;
     englishCell.innerHTML = englishScore;
     physicsCell.innerHTML = physicsScore;
     chemistryCell.innerHTML = chemistryScore;
+    gradYearCell.innerHTML = yearOfGraduation;
 
-    console.log(studentName);
+    console.log(firstStudentGradYear);
     var Intro_Page = document.querySelector(".Intro_Page");
     var Second_Page = document.querySelector(".Second_Page");
 
     Intro_Page.style.display = "block";
     Second_Page.style.display = "none";
   }
+}
+
+function sort() {
+  var numberOfStudents = Student_Info_Table.rows.length - 1;
+  var yearOfGrads = [];
+
+  for (i = 1; i < numberOfStudents; i++) {
+    var studentGradYear = Student_Info_Table.rows[i].cells[6];
+    yearOfGrads.push(studentGradYear);
+  }
+
+  yearOfGrads = yearOfGrads.sort();
 }
